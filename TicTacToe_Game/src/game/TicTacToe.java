@@ -4,6 +4,7 @@ public class TicTacToe {
 	static char[] board= new char[10];
 	static char playerSymbol;
 	static char cpuSymbol;
+	static int position;
 	/**
 	 * UC1 : Creating board for tic tac toe 
 	 * initializing elements to ' '
@@ -38,12 +39,28 @@ public class TicTacToe {
 		}
 		
 	}
+	public static void showBoard() {
+		for(int i=1;i<board.length;i++)
+		{
+			board[i]=(char)i;
+			System.out.println((int)board[i]);
+		}
+		 System.out.println("|---|---|---|");
+	     System.out.println("| " + (int)board[1] + " | " + (int)board[2] + " | " + (int)board[3] + " |");
+	     System.out.println("|-----------|");
+	     System.out.println("| " + (int)board[4] + " | "+ (int)board[5] + " | " + (int)board[6] + " |");
+	     System.out.println("|-----------|");
+	     System.out.println("| " + (int)board[7] + " | " +  (int)board[8] + " | " + (int)board[9] + " |");
+	     System.out.println("|---|---|---|");		
+
+	}
 	
 
 	public static void main(String[] args) {
 		Scanner sc=new Scanner(System.in);
 		createBoard();
 	    chooseSymbol();
+	    showBoard();
 		
 
 	}
