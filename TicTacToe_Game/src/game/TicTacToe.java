@@ -64,8 +64,18 @@ public class TicTacToe {
 		System.out.println("Enter your move ");
 	    userMove = sc.nextInt();
 	}
+	/**
+	 * UC5 checks if position entered by user is free or not
+	 */
 	public static void makeMove() {
-		
+		if(board[userMove]=='X'||board[userMove]=='x'||board[userMove]=='O'||board[userMove]=='o')
+		{
+			System.out.println("Not free space, choose anathor move");
+		}
+		else
+		{
+			board[userMove]=playerSymbol;
+		}
 	}
 	public static void main(String[] args) {
 		createBoard();
