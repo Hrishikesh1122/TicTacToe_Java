@@ -1,11 +1,13 @@
 package game;
 import java.util.*;
+import java.util.Random;
 public class TicTacToe {
 	static char[] board= new char[10];
 	static char playerSymbol;
 	static char cpuSymbol;
 	static int position;
     static int userMove;
+    static int tossValue;
 	/**
 	 * UC1 : Creating board for tic tac toe 
 	 * initializing elements to ' '
@@ -71,6 +73,7 @@ public class TicTacToe {
 		if(board[userMove]=='X'||board[userMove]=='x'||board[userMove]=='O'||board[userMove]=='o')
 		{
 			System.out.println("Not free space, choose anathor move");
+			getMove();
 		}
 		else
 		{
