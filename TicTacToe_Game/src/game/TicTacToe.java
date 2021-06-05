@@ -39,6 +39,9 @@ public class TicTacToe {
 		}
 		
 	}
+	/**
+	 * Displays the TicTacToe board in console
+	 */
 	public static void showBoard() {
 		for(int i=1;i<board.length;i++)
 		{
@@ -61,15 +64,15 @@ public class TicTacToe {
 		System.out.println("Enter your move ");
 	    userMove = sc.nextInt();
 	}
-
-	
-	
-
+	public static void makeMove() {
+		
+	}
 	public static void main(String[] args) {
 		createBoard();
 	    chooseSymbol();
 	    showBoard();
 		getMove();
+		makeMove();
 
 	}
 
